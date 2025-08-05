@@ -1,6 +1,6 @@
 import React from 'react';
 import Navbar from './Navbar';
-import '../styles/HomeLayout.css'; 
+import '../styles/homeLayout.css'; 
 
 const HomeLayout = ({ children }) => {
   return (
