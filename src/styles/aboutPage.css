@@ -1,3 +1,479 @@
-body {
-  color: black;
+:root {
+  --primary: #4300FF;
+  --dark: #030637;
+  --accent: #B13BFF;
+  --text-light: #ccc;
+  --dark-blue: #030637; /* Added for journey content color */
+  --dot-outer: #030637; /* teal outer dot */
+  --dot-border: #B13BFF; /* dark border for contrast */
+  --dot-inner: #f0f0f0;  /* light inner dot */
+}
+
+/* Top Section */
+.about-top-section {
+  text-align: center;
+  padding-bottom: 3rem;
+  padding-top: 0.5rem;
+  background: #fff;
+}
+.about-top-section h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+}
+.about-top-section p {
+  color: #555;
+  margin-bottom: 2.5rem;
+}
+
+/* Mission Cards */
+.about-mission-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.about-mission-card {
+  background: #fff;
+  padding: 2rem;
+  width: 350px;
+  border-radius: 12px;
+  cursor: pointer;
+  color: var(--dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  /* Soft glowing effect */
+  box-shadow:
+    0 0 8px 2px rgba(177, 59, 255, 0.15),
+    0 4px 15px rgba(179, 59, 255, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+.about-mission-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 0 15px 6px rgba(177, 59, 255, 0.6),
+    0 8px 40px rgba(179, 59, 255, 0.4);
+  background-color: var(--accent);
+  color: white;
+}
+.about-mission-card:hover .icon {
+  color: white;
+}
+.about-mission-card .icon {
+  font-size: 2.2rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.about-mission-card h3 {
+  margin: 0.5rem 0 0.5rem;
+  font-weight: 700;
+  transition: color 0.3s ease;
+}
+.about-mission-card p {
+  color: inherit;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+/* Timeline Section */
+.about-timeline-section {
+  background: #f5f8ff;
+  padding: 4rem 1rem;
+  color: var(--text-light);
+}
+.about-title {
+  text-align: center;
+  font-size: 2.3rem;
+  color: var(--dark);
+  margin-bottom: 2.5rem;
+}
+.about-timeline {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.about-timeline::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background: var(--primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Timeline Items */
+.about-timeline-item {
+  position: relative;
+  width: 60%;
+  margin: 1rem 0;
+  padding: 1rem 1.5rem;
+}
+.about-timeline-item.left {
+  left: 0;
+  text-align: right;
+}
+.about-timeline-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dot with ring and inner circle */
+.about-dot {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  background: var(--dot-outer);
+  border: 3px solid var(--dot-border);
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(58, 157, 143, 0.7);
+  transform: translateY(-50%);
+  z-index: 2;
+}
+.about-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--dot-inner);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 3px rgba(240, 240, 240, 0.6);
+}
+.about-timeline-item.left .about-dot {
+  right: -10px;
+  transform: translate(50%, -50%);
+}
+.about-timeline-item.right .about-dot {
+  left: -10px;
+  transform: translate(-50%, -50%);
+}
+
+/* Timeline Content Box */
+.about-content {
+  background: var(--dark);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 0 25px rgba(67, 0, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-light);
+}
+.about-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 35px rgba(67, 0, 255, 0.3);
+}
+.about-content h2 {
+  color: var(--primary);
+  margin-bottom: 0.8rem;
+}
+.about-content ul {
+  list-style: none;
+  padding-left: 0;
+}
+.about-content li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.4rem;
+  color: var(--text-light);
+  transition: color 0.2s;
+}
+.about-content li::before {
+  content: '✔';
+  position: absolute;
+  left: 0;
+  color: var(--accent);
+  font-size: 0.9rem;
+}
+.about-content li:hover {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Journey Section */
+.about-journey-section {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+  text-align: center;
+  color: var(--dark-blue);
+}
+.about-journey-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.journey-subtitle {
+  color: #666;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+
+/* Journey Timeline Container */
+.journey-timeline {
+  position: relative;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.journey-timeline::after {
+  content: '';
+  position: absolute;
+  width: 5px;
+  background: var(--primary);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Journey Timeline Items */
+.journey-item {
+  position: relative;
+  width: 50%;
+  padding: 1rem 1.5rem;
+  box-sizing: border-box;
+  margin-bottom: 2rem;
+}
+.journey-item.left {
+  left: 0;
+  text-align: right;
+}
+.journey-item.right {
+  left: 50%;
+  text-align: left;
+}
+
+/* Dot with ring and inner circle */
+.journey-dot {
+  position: absolute;
+  top: 50%;
+  width: 24px;
+  height: 24px;
+  background: var(--dot-outer);
+  border-radius: 50%;
+  border: 3px solid var(--dot-border);
+  box-shadow: 0 0 6px rgba(58, 157, 143, 0.7);
+  z-index: 3;
+  transform: translateY(-50%);
+}
+.journey-dot::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 12px;
+  height: 12px;
+  background: var(--dot-inner);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 3px rgba(240, 240, 240, 0.6);
+}
+.journey-item.left .journey-dot {
+  right: -12px;
+  transform: translate(50%, -50%);
+}
+.journey-item.right .journey-dot {
+  left: -12px;
+  transform: translate(-50%, -50%);
+}
+
+/* Journey Content Box */
+.journey-content {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  display: inline-block;
+  max-width: 90%;
+  text-align: left;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
+  color: #444;
+  cursor: pointer;
+
+  /* Soft glowing effect */
+  box-shadow:
+    0 0 8px 2px rgba(177, 59, 255, 0.15),
+    0 4px 15px rgba(179, 59, 255, 0.1);
+}
+.journey-content:hover {
+  background-color: var(--accent);
+  box-shadow:
+    0 0 15px 6px rgba(177, 59, 255, 0.6),
+    0 8px 40px rgba(179, 59, 255, 0.4);
+  color: white;
+  transform: translateY(-6px);
+}
+.journey-content:hover h3,
+.journey-content:hover .journey-year,
+.journey-content:hover p {
+  color: white;
+}
+.journey-year {
+  display: inline-block;
+  background-color: var(--primary);
+  color: white;
+  padding: 0.3rem 1rem;
+  border-radius: 20px;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+}
+.journey-content h3 {
+  margin: 0.3rem 0 0.8rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  font-size: 1.2rem;
+}
+.journey-content p {
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
+
+/* Certifications Section */
+.about-certifications-section {
+  max-width: 1000px;
+  margin: 4rem auto 6rem;
+  text-align: center;
+  color: var(--primary);
+  padding: 0 1rem;
+}
+.about-certifications-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+.certifications-subtitle {
+  color: #666;
+  margin-bottom: 3rem;
+  font-size: 1rem;
+}
+.certifications-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.certification-card {
+  background: #fff;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  cursor: default;
+  width: 300px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+
+  /* Soft glowing effect */
+  box-shadow:
+    0 0 8px 2px rgba(177, 59, 255, 0.15),
+    0 4px 15px rgba(179, 59, 255, 0.1);
+  text-align: center; /* Center the icon and text */
+}
+.certification-card:hover {
+  box-shadow:
+    0 0 15px 6px rgba(177, 59, 255, 0.6),
+    0 8px 40px rgba(179, 59, 255, 0.4);
+  transform: translateY(-6px);
+}
+.certification-card .icon {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.certification-card h3 {
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  color: var(--dark);
+}
+.certification-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  /* Timeline Items - full width and left aligned */
+  .about-timeline-item,
+  .about-timeline-item.left,
+  .about-timeline-item.right {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 50px; /* enough space for dot */
+    padding-right: 1rem;
+    margin-bottom: 2rem; /* more breathing room */
+  }
+  
+  /* Timeline vertical line */
+  .about-timeline::after {
+    left: 20px;
+  }
+  
+  /* Timeline dots on the line */
+  .about-dot {
+    left: 20px !important;
+    right: auto !important;
+    transform: translateY(-50%);
+  }
+
+  /* Mission Cards - stack vertically with spacing */
+  .about-mission-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+  .about-mission-card {
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 1rem;
+  }
+
+  /* Journey Timeline Items - full width and left aligned */
+  .journey-item,
+  .journey-item.left,
+  .journey-item.right {
+    width: 100%;
+    left: 0 !important;
+    text-align: left !important;
+    padding-left: 50px; /* same space for dots */
+    padding-right: 1rem;
+    margin-bottom: 2.5rem; /* consistent spacing */
+  }
+  
+  /* Journey vertical line */
+  .journey-timeline::after {
+    left: 20px !important;
+  }
+  
+  /* Journey dots on the line */
+  .journey-dot {
+    left: 20px !important;
+    right: auto !important;
+    transform: translateY(-50%);
+  }
+
+  /* Certifications Cards stack */
+  .certifications-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
 }
