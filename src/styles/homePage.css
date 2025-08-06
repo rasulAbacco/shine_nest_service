@@ -1,27 +1,33 @@
 .hero-text {
   text-shadow: 1px 1px 2px rgb(255, 255, 255);
   color: black;
+  font-size: 3.5rem;
   font-weight: bold;
   text-align: center;
   margin-top: 20px;
 }
 
 .hero-description {
-  color: rgb(192, 192, 192);
+  color: #000000;
   font-size: 1.2rem;
-  font-weight: 700;
+  font-weight: 500;
   text-align: center;
+  text-shadow: 0.5px 0.5px 1px rgb(255, 255, 255);
 }
 
 .home-services {
-  height: 90vh;
+  min-height: 70vh;
+}
+
+.services-box{
+  margin-left: 2rem;
 }
 .services-box h4 {
-    font-size:1.2rem;
-    margin-bottom:2rem;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 .services-box ul li {
-    font-size:1rem;
+  font-size: 1rem;
 }
 
 .services-text {
@@ -33,31 +39,23 @@
 }
 
 .home-girl {
-  height: 80vh;
+  height: 70vh;
+  width: 60vh;
 }
 
 .home-girl img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-
-
-
-
-
-
-
-
 .logo-cards {
-    background: #ebebeb;
-    margin-right: 2rem;
-    padding: 1rem;
-    height: 6rem;
-    border-radius: 1rem;
+  background: #ebebeb;
+  margin-right: 2rem;
+  padding: 1rem;
+  height: 6rem;
+  border-radius: 1rem;
 }
 
 @keyframes marquee {

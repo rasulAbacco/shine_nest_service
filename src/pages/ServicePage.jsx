@@ -3,6 +3,7 @@ import "../styles/services.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
 
 // Modal component (reusable)
 // const Modal = ({ isOpen, onClose, title, description }) => {
@@ -30,68 +31,68 @@ function ServicePage() {
     AOS.init({ duration: 800 });
   }, []);
 
- const cards = [
-  {
-    title: "Vacuum Service",
-    description: "Deep vacuum cleaning for carpets and sofas.",
-    img: "https://5.imimg.com/data5/SELLER/Default/2024/2/385902315/AG/ZU/NV/12247396/vacuum-cleaning-service-500x500.jpg",
-  },
-  {
-    title: "Kitchen Cleaning",
-    description: "Sparkling countertops and sanitized surfaces.",
-    img: "https://mccoymart.com/post/wp-content/uploads/2019/05/Kitchen-cupboard-cleaner.jpg",
-  },
-  {
-    title: "Bathroom Sanitization",
-    description: "Kills 99.9% of germs and removes stains.",
-    img: "https://cpimg.tistatic.com/05837563/b/4/Bathroom-Cleaning-Services.jpg",
-  },
-  {
-    title: "Window Wash",
-    description: "Crystal-clear glass with streak-free shine.",
-    img: "https://skbuildingservices.com/wp-content/uploads/2023/02/what-is-the-difference-between-window-washing-and-window-cleaning_-scaled-1.jpeg",
-  },
-  {
-    title: "Office Deep Clean",
-    description: "Maintain a professional and clean workspace.",
-    img: "https://5.imimg.com/data5/TestImages/YC/VC/JQ/SELLER-55189093/office-cleaning-services.png",
-  },
-  {
-    title: "Mattress Refresh",
-    description: "Deodorize and disinfect your bedding.",
-    img: "https://cleanshades.sg/wp-content/uploads/2024/02/Mattress_deep_cleaning.jpg",
-  },
-  {
-    title: "Carpet Shampoo",
-    description: "Revive colors and texture with deep cleaning.",
-    img: "https://www.dalworth.com/images/tile-and-grout-cleaning/tile-floor-cleaning-service.jpg",
-  },
-  {
-    title: "Sofa Cleaning",
-    description: "Remove dust, stains, and pet hair.",
-    img: "https://jamesbonddrycleaners.com/wp-content/uploads/2025/03/sofa-clening.jpg",
-  },
-  {
-    title: "Appliance Detailing",
-    description: "Spotless microwave, fridge, and oven.",
-    img: "https://hellamaid.ca/wp-content/uploads/2023/08/2-1.jpg",
-  },
-  {
-    title: "Floor Mopping",
-    description: "Sparkling tiles with eco-friendly solutions.",
-    img: "https://flooringsolutions.ph/wp-content/uploads/2024/05/Cleaning-Methods-for-Different-Types-of-Floor.jpg",
-  },
-  {
-    title: "Curtain Cleaning",
-    description: "Dust and allergen-free fabric cleaning.",
-    img: "https://selvafacilitymanagement.com/wp-content/uploads/2023/09/Curtain-Cleaning.jpg",
-  },
-  {
-    title: "Full Home Service",
-    description: "Top-to-bottom premium cleaning experience.",
-    img: "https://5.imimg.com/data5/SELLER/Default/2023/1/YT/OB/YL/81310128/full-home-cleaning-services.jpg",
-  },
-];
+  const cards = [
+    {
+      title: "Vacuum Service",
+      description: "Deep vacuum cleaning for carpets and sofas.",
+      img: "https://5.imimg.com/data5/SELLER/Default/2024/2/385902315/AG/ZU/NV/12247396/vacuum-cleaning-service-500x500.jpg",
+    },
+    {
+      title: "Kitchen Cleaning",
+      description: "Sparkling countertops and sanitized surfaces.",
+      img: "https://mccoymart.com/post/wp-content/uploads/2019/05/Kitchen-cupboard-cleaner.jpg",
+    },
+    {
+      title: "Bathroom Sanitization",
+      description: "Kills 99.9% of germs and removes stains.",
+      img: "https://cpimg.tistatic.com/05837563/b/4/Bathroom-Cleaning-Services.jpg",
+    },
+    {
+      title: "Window Wash",
+      description: "Crystal-clear glass with streak-free shine.",
+      img: "https://skbuildingservices.com/wp-content/uploads/2023/02/what-is-the-difference-between-window-washing-and-window-cleaning_-scaled-1.jpeg",
+    },
+    {
+      title: "Office Deep Clean",
+      description: "Maintain a professional and clean workspace.",
+      img: "https://5.imimg.com/data5/TestImages/YC/VC/JQ/SELLER-55189093/office-cleaning-services.png",
+    },
+    {
+      title: "Mattress Refresh",
+      description: "Deodorize and disinfect your bedding.",
+      img: "https://cleanshades.sg/wp-content/uploads/2024/02/Mattress_deep_cleaning.jpg",
+    },
+    {
+      title: "Carpet Shampoo",
+      description: "Revive colors and texture with deep cleaning.",
+      img: "https://www.dalworth.com/images/tile-and-grout-cleaning/tile-floor-cleaning-service.jpg",
+    },
+    {
+      title: "Sofa Cleaning",
+      description: "Remove dust, stains, and pet hair.",
+      img: "https://jamesbonddrycleaners.com/wp-content/uploads/2025/03/sofa-clening.jpg",
+    },
+    {
+      title: "Appliance Detailing",
+      description: "Spotless microwave, fridge, and oven.",
+      img: "https://hellamaid.ca/wp-content/uploads/2023/08/2-1.jpg",
+    },
+    {
+      title: "Floor Mopping",
+      description: "Sparkling tiles with eco-friendly solutions.",
+      img: "https://flooringsolutions.ph/wp-content/uploads/2024/05/Cleaning-Methods-for-Different-Types-of-Floor.jpg",
+    },
+    {
+      title: "Curtain Cleaning",
+      description: "Dust and allergen-free fabric cleaning.",
+      img: "https://selvafacilitymanagement.com/wp-content/uploads/2023/09/Curtain-Cleaning.jpg",
+    },
+    {
+      title: "Full Home Service",
+      description: "Top-to-bottom premium cleaning experience.",
+      img: "https://5.imimg.com/data5/SELLER/Default/2023/1/YT/OB/YL/81310128/full-home-cleaning-services.jpg",
+    },
+  ];
 
   const handleCardClick = (card) => {
     setModalData(card);
@@ -102,6 +103,7 @@ function ServicePage() {
   return (
     <div>
       {/* HERO SECTION */}
+      <Navbar />
       <div className="service-page text-white relative overflow-hidden min-h-screen flex items-center justify-between px-6 md:px-20 py-10">
         {/* Bubbles */}
         {[
@@ -187,13 +189,10 @@ function ServicePage() {
         ].map((bubble, i) => (
           <div
             key={i}
-            className={`absolute ${bubble.top || ""} ${bubble.bottom || ""} ${
-              bubble.left || ""
-            } ${bubble.right || ""} ${
-              bubble.size
-            } bg-white opacity-10 rounded-full animate-ping ${
-              bubble.delay || ""
-            }`}
+            className={`absolute ${bubble.top || ""} ${bubble.bottom || ""} ${bubble.left || ""
+              } ${bubble.right || ""} ${bubble.size
+              } bg-white opacity-10 rounded-full animate-ping ${bubble.delay || ""
+              }`}
           />
         ))}
 
@@ -229,114 +228,114 @@ function ServicePage() {
 
       {/* FLIP CARDS SECTION */}
 
-        <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-8">
-            {/* Heading */}
-            <h2
-            className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-9"
-            data-aos="fade-up"
+      <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-8">
+        {/* Heading */}
+        <h2
+          className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-9"
+          data-aos="fade-up"
+        >
+          Our Services
+        </h2>
+
+        {/* Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-25 gap-y-0">
+          {cards.map((card, i) => (
+            <div
+              key={i}
+              className="container"
+              data-aos="fade-up"
+              onClick={() => setModalData(card)}
             >
-            Our Services
-            </h2>
-
-            {/* Cards Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-25 gap-y-0">
-                {cards.map((card, i) => (
-                    <div
-                    key={i}
-                    className="container"
-                    data-aos="fade-up"
-                    onClick={() => setModalData(card)}
-                    >
-                    <div className="card">
-                        {/* Front Side with background image */}
-                        <div
-                        className="front relative flex items-center justify-center text-center"
-                        style={{
-                            backgroundImage: `url(${card.img})`,
-                            backgroundSize: "cover",
-                            backgroundPosition: "center",
-                        }}
-                        >
-                        {/* Overlay for text visibility */}
-                        <div className="absolute inset-0 bg-opacity-40 rounded-t-2xl"></div>
-
-                        {/* Text centered */}
-                        <div className="relative z-10 px-4">
-                            <p className="front-heading text-white">{card.title}</p>
-                        </div>
-                        </div>
-
-                        {/* Back Side */}
-                        <div className="back">
-                        <p className="back-heading">{card.title}</p>
-                        <p>{card.description}</p>
-                        </div>
-                    </div>
-                    </div>
-                ))}
-            </div>
-
-        </div>
-
-
- {/*  VALUE ADDED SERVICES */}
-
-
-        <div className="bg-gradient-to-br from-gray-50 to-white py-20 px-6 md:px-20">
-            <h2 className="text-3xl md:text-3xl font-bold text-center text-gray-800 mb-16 tracking-tight">
-                Value Added Services
-            </h2>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                {/* Card */}
-                {[
-                {
-                    title: "Transition",
-                    desc: "STS will seamlessly handle the site transition process with full support, at no extra cost to the client.",
-                },
-                {
-                    title: "AMC",
-                    desc: "STS will manage all AMC activities, including coordination, vendor management, and reporting, ensuring cost-efficiency and uptime.",
-                },
-                {
-                    title: "Reports",
-                    desc: "Customized reports such as Daily Logs, Monthly Performance Reviews, and Exception Reports will be delivered regularly for full operational transparency.",
-                },
-                {
-                    title: "Site Improvements",
-                    desc: "Periodic inspections will be conducted, and actionable proposals will be submitted to enhance safety, cleanliness, and operational efficiency.",
-                },
-                {
-                    title: "Procurement",
-                    desc: "STS provides access to vetted suppliers for maintenance and consumables, passing on the cost benefits and ensuring timely availability.",
-                },
-                {
-                    title: "Software",
-                    desc: (
-                    <>
-                        Our in-house dashboard enables real-time tracking of MMR, DG sets, and electrical systems for large properties.
-                        <br />
-                        <span className="italic text-sm text-gray-500">
-                        *Recommended for sites with 100+ manpower*
-                        </span>
-                    </>
-                    ),
-                },
-                ].map(({ title, desc }, idx) => (
+              <div className="card">
+                {/* Front Side with background image */}
                 <div
-                    key={idx}
-                    className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-shadow duration-300 border border-gray-100"
+                  className="front relative flex items-center justify-center text-center"
+                  style={{
+                    backgroundImage: `url(${card.img})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                  }}
                 >
-                    <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
-                    <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
+                  {/* Overlay for text visibility */}
+                  <div className="absolute inset-0 bg-opacity-40 rounded-t-2xl"></div>
+
+                  {/* Text centered */}
+                  <div className="relative z-10 px-4">
+                    <p className="front-heading text-white">{card.title}</p>
+                  </div>
                 </div>
-                ))}
+
+                {/* Back Side */}
+                <div className="back">
+                  <p className="back-heading">{card.title}</p>
+                  <p>{card.description}</p>
+                </div>
+              </div>
             </div>
+          ))}
         </div>
 
-        {/* footer */}
+      </div>
 
-        <Footer/>
+
+      {/*  VALUE ADDED SERVICES */}
+
+
+      <div className="bg-gradient-to-br from-gray-50 to-white py-20 px-6 md:px-20">
+        <h2 className="text-3xl md:text-3xl font-bold text-center text-gray-800 mb-16 tracking-tight">
+          Value Added Services
+        </h2>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+          {/* Card */}
+          {[
+            {
+              title: "Transition",
+              desc: "STS will seamlessly handle the site transition process with full support, at no extra cost to the client.",
+            },
+            {
+              title: "AMC",
+              desc: "STS will manage all AMC activities, including coordination, vendor management, and reporting, ensuring cost-efficiency and uptime.",
+            },
+            {
+              title: "Reports",
+              desc: "Customized reports such as Daily Logs, Monthly Performance Reviews, and Exception Reports will be delivered regularly for full operational transparency.",
+            },
+            {
+              title: "Site Improvements",
+              desc: "Periodic inspections will be conducted, and actionable proposals will be submitted to enhance safety, cleanliness, and operational efficiency.",
+            },
+            {
+              title: "Procurement",
+              desc: "STS provides access to vetted suppliers for maintenance and consumables, passing on the cost benefits and ensuring timely availability.",
+            },
+            {
+              title: "Software",
+              desc: (
+                <>
+                  Our in-house dashboard enables real-time tracking of MMR, DG sets, and electrical systems for large properties.
+                  <br />
+                  <span className="italic text-sm text-gray-500">
+                    *Recommended for sites with 100+ manpower*
+                  </span>
+                </>
+              ),
+            },
+          ].map(({ title, desc }, idx) => (
+            <div
+              key={idx}
+              className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-shadow duration-300 border border-gray-100"
+            >
+              <h3 className="text-xl font-bold mb-3 text-gray-800">{title}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed">{desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* footer */}
+
+      <Footer />
 
 
       {/* MODAL */}
