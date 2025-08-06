@@ -30,9 +30,9 @@ const TermsAndPrivacy = () => {
             </section>
 
             {/* Navigation Tabs */}
-            <div className="sticky top-0 z-50 bg-white shadow-sm border-b">
+            <div className="sticky top-22 z-50 bg-white shadow-sm border-b">
                 <div className="max-w-5xl mx-auto px-6">
-                    <div className="flex space-x-1">
+                    <div className="flex space-x-1 mt-10">
                         <button
                             onClick={() => scrollToSection('privacy-policy')}
                             className={`px-6 py-4 font-semibold border-b-2 transition-all duration-300 ${activeSection === 'privacy'
