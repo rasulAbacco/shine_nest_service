@@ -1,6 +1,6 @@
 :root {
   --primary: #4300ff;
-  --dark: #030637;
+
   --accent: #b13bff;
   --text-light: #ccc;
   --dark-blue: #030637; /* Added for journey content color */
@@ -205,15 +205,17 @@
   max-width: 1000px;
   margin: 4rem auto;
   padding: 0 1rem;
+  
   text-align: center;
   color: var(--dark-blue);
 }
 .about-journey-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--accent);
+  color: white;
 }
+
 .journey-subtitle {
   color: #666;
   margin-bottom: 3rem;
@@ -349,10 +351,10 @@
   padding: 0 1rem;
 }
 .about-certifications-section h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: var(--accent);
+  color:white;
 }
 .certifications-subtitle {
   color: #666;

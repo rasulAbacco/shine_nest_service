@@ -7,7 +7,7 @@ import Contact from './pages/Contact.jsx';
 import HomePage from './pages/HomePage.jsx';
 import ServicePage from './pages/ServicePage.jsx';
 import Footer from './components/Footer.jsx';
-
+import TestimonialsSection from './pages/Testimonials.jsx';
 
 const App = () => {
   return (
@@ -23,6 +23,8 @@ const App = () => {
       <Route path="/footer" element={<Footer />} />
 
       <Route path="/about" element={<About />} />
+      <Route path="/testimonials" element={<TestimonialsSection />} />
+
 
 
     </Routes>
