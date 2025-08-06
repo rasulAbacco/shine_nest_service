@@ -228,12 +228,46 @@ body {
   flex: 1;
   background-color: #030637;
   color: #fff;
-  padding: 40px;
-  min-width: 300px;
+  padding: 50px;
+  min-width: 100px;
 }
 
+/* Mobile View */
+@media (max-width: 768px) {
+  .contact-info {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .contact-info p,
+  .contact-info h4 {
+    font-size: 14px;
+  }
+
+  .contact-info i,
+  .contact-info svg {
+    font-size: 18px;
+    margin: 5px;
+  }
+
+  .contact-info .social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .contact-info h2 {
+  padding-top: 25rem;
+  font-size: 60px;
+  margin-bottom: 16px;
+}
+}
+
+
 .contact-info h2 {
-  font-size: 70px;
+  
+  font-size: 60px;
   margin-bottom: 16px;
 }
 
@@ -500,3 +534,5 @@ h2.map-heading::after {
 .map-cta-button:hover {
     background-color: #6c1bb2;
 }
+
+
