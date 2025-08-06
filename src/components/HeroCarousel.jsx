@@ -69,11 +69,11 @@ const HeroCarousel = () => {
                     </motion.h1>
                 </AnimatePresence>
 
-<<<<<<< HEAD
+
                 {/* <AnimatePresence mode="wait" className="blur-[5px]">
-=======
+
 {/*                 <AnimatePresence mode="wait">
->>>>>>> b3ed8ed5f02e818a63c3fa54a02c3b84db1f1334
+
                     <motion.p
                         key={`desc-${slides[currentSlide].id}`}
                         initial={{ opacity: 0, y: 20 }}
