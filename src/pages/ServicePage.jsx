@@ -270,10 +270,11 @@ function ServicePage() {
         >
           Our Services
         </h2>
-        <p style={{text:"center"}} className="font-semibold">Transform your workplace with our comprehensive facility management and staffing solutions ensuring cleanliness, comfort, efficiency, and seamless daily operations.</p>
+          <p className="font-semibold text-center" data-aos="fade-up">
+            Transform your workplace with our comprehensive facility management and staffing solutions ensuring cleanliness, comfort, efficiency, and seamless daily operations.
+          </p>
 
         {/* Cards Grid */}
-        {/* Cards Grid with Group Headings */}
         {cardGroups.map((group, index) => (
           <div key={index} className="group-title w-full ">
             <h3
@@ -315,8 +316,8 @@ function ServicePage() {
                       <p>{card.description}</p>
                       <Link
                         to={card.route}
-                        className="mt-2 px-4 py-2 bg-[blue] rounded-lg hover:bg-blue-700 transition"
-                        style={{color:"white"}}
+                        className="mt-2 px-4 py-2 bg-[blue] rounded-lg hover:bg-blue-700 transition no-underline"
+                        style={{color:"white", textDecoration:"none"}}
                       >
                         More Info
                       </Link>

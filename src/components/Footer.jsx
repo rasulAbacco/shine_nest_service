@@ -28,7 +28,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3 text-white">About</h3>
           <ul className="space-y-2 text-gray-300">
             <li><a href="#">Company</a></li>
-            <li><a href="#">FAQs</a></li>
+            <li><a href="/FAQ">FAQs</a></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Recent Updates</a></li>
           </ul>
