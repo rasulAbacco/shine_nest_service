@@ -54,15 +54,12 @@ height: 230px;
 .front, .back {
   height: 100%;
   width: 100%;
-   border-radius: 27px;
-background: #f3f3f3;
-box-shadow:  10px 10px 20px #a1a1a1,
-             -10px -10px 20px #ffffff;
-  
+  border-radius: 27px;
+  background: #f3f3f3;
+  box-shadow:  10px 10px 20px #a1a1a1,
+               -10px -10px 20px #ffffff;
   position: absolute;
-   
   backface-visibility: hidden;
-   
   display: flex;
   justify-content: center;
   flex-direction: column;
