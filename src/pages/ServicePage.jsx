@@ -4,6 +4,9 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import { Link } from "react-router-dom";
+
+
 
 // Modal component (reusable)
 // const Modal = ({ isOpen, onClose, title, description }) => {
@@ -31,74 +34,102 @@ function ServicePage() {
     AOS.init({ duration: 800 });
   }, []);
 
-  const cards = [
-    {
-      title: "Vacuum Service",
-      description: "Deep vacuum cleaning for carpets and sofas.",
-      img: "https://5.imimg.com/data5/SELLER/Default/2024/2/385902315/AG/ZU/NV/12247396/vacuum-cleaning-service-500x500.jpg",
-    },
-    {
-      title: "Kitchen Cleaning",
-      description: "Sparkling countertops and sanitized surfaces.",
-      img: "https://mccoymart.com/post/wp-content/uploads/2019/05/Kitchen-cupboard-cleaner.jpg",
-    },
-    {
-      title: "Bathroom Sanitization",
-      description: "Kills 99.9% of germs and removes stains.",
-      img: "https://cpimg.tistatic.com/05837563/b/4/Bathroom-Cleaning-Services.jpg",
-    },
-    {
-      title: "Window Wash",
-      description: "Crystal-clear glass with streak-free shine.",
-      img: "https://skbuildingservices.com/wp-content/uploads/2023/02/what-is-the-difference-between-window-washing-and-window-cleaning_-scaled-1.jpeg",
-    },
-    {
-      title: "Office Deep Clean",
-      description: "Maintain a professional and clean workspace.",
-      img: "https://5.imimg.com/data5/TestImages/YC/VC/JQ/SELLER-55189093/office-cleaning-services.png",
-    },
-    {
-      title: "Mattress Refresh",
-      description: "Deodorize and disinfect your bedding.",
-      img: "https://cleanshades.sg/wp-content/uploads/2024/02/Mattress_deep_cleaning.jpg",
-    },
-    {
-      title: "Carpet Shampoo",
-      description: "Revive colors and texture with deep cleaning.",
-      img: "https://www.dalworth.com/images/tile-and-grout-cleaning/tile-floor-cleaning-service.jpg",
-    },
-    {
-      title: "Sofa Cleaning",
-      description: "Remove dust, stains, and pet hair.",
-      img: "https://jamesbonddrycleaners.com/wp-content/uploads/2025/03/sofa-clening.jpg",
-    },
-    {
-      title: "Appliance Detailing",
-      description: "Spotless microwave, fridge, and oven.",
-      img: "https://hellamaid.ca/wp-content/uploads/2023/08/2-1.jpg",
-    },
-    {
-      title: "Floor Mopping",
-      description: "Sparkling tiles with eco-friendly solutions.",
-      img: "https://flooringsolutions.ph/wp-content/uploads/2024/05/Cleaning-Methods-for-Different-Types-of-Floor.jpg",
-    },
-    {
-      title: "Curtain Cleaning",
-      description: "Dust and allergen-free fabric cleaning.",
-      img: "https://selvafacilitymanagement.com/wp-content/uploads/2023/09/Curtain-Cleaning.jpg",
-    },
-    {
-      title: "Full Home Service",
-      description: "Top-to-bottom premium cleaning experience.",
-      img: "https://5.imimg.com/data5/SELLER/Default/2023/1/YT/OB/YL/81310128/full-home-cleaning-services.jpg",
-    },
-  ];
+ const cards = [
+  {
+    title: "Vacuum Service",
+    description: "Professional-grade vacuuming to remove embedded dust, dirt, and allergens from carpets, sofas, and upholstery, leaving your interiors fresh and hygienic.",
+    img: "https://5.imimg.com/data5/SELLER/Default/2024/2/385902315/AG/ZU/NV/12247396/vacuum-cleaning-service-500x500.jpg",
+    route: "/sofrservices",
+  },
+  {
+    title: "Kitchen Cleaning",
+    description: "Comprehensive kitchen cleaning with degreasing, sanitizing countertops, cabinets, chimney hoods, sinks, and tiles for a sparkling, food-safe environment.",
+    img: "https://mccoymart.com/post/wp-content/uploads/2019/05/Kitchen-cupboard-cleaner.jpg",
+     route: "/sofrservices",
+  },
+  {
+    title: "Bathroom Sanitization",
+    description: "Thorough disinfection and stain removal from tiles, toilets, sinks, mirrors, and fixtures using hospital-grade solutions that eliminate 99.9% of bacteria and viruses.",
+    img: "https://cpimg.tistatic.com/05837563/b/4/Bathroom-Cleaning-Services.jpg",
+     route: "/sofrservices",
+  },
+  {
+    title: "Window Wash",
+    description: "Exterior and interior glass cleaning with streak-free solutions and squeegee techniques to ensure a crystal-clear, professional finish every time.",
+    img: "https://skbuildingservices.com/wp-content/uploads/2023/02/what-is-the-difference-between-window-washing-and-window-cleaning_-scaled-1.jpeg",
+    route:"/pestcontrol",
+  },
+  {
+    title: "Office Deep Clean",
+    description: "Detailed office cleaning including desks, electronics, flooring, partitions, and common areas to maintain a healthy, productive, and professional workplace.",
+    img: "https://5.imimg.com/data5/TestImages/YC/VC/JQ/SELLER-55189093/office-cleaning-services.png",
+     route:"/pestcontrol",
+  },
+  {
+    title: "Mattress Refresh",
+    description: "Deep cleaning and steam sanitization of mattresses to remove odors, bacteria, dust mites, and allergens, ensuring a restful and hygienic sleep experience.",
+    img: "https://cleanshades.sg/wp-content/uploads/2024/02/Mattress_deep_cleaning.jpg",
+     route:"/pestcontrol",
+  },
+  {
+    title: "Carpet Shampoo",
+    description: "Hot water extraction and shampooing of carpets to restore color, remove deep-set stains, and eliminate odors for a revitalized and clean appearance.",
+    img: "https://www.dalworth.com/images/tile-and-grout-cleaning/tile-floor-cleaning-service.jpg",
+     route:"/pestcontrol",
+  },
+  {
+    title: "Sofa Cleaning",
+    description: "Gentle yet effective upholstery cleaning using industry-grade equipment to remove dirt, stains, and allergens, extending the life of your sofas and chairs.",
+    img: "https://jamesbonddrycleaners.com/wp-content/uploads/2025/03/sofa-clening.jpg",
+     route:"/pestcontrol",
+  },
+  {
+    title: "Appliance Detailing",
+    description: "Detailed interior and exterior cleaning of kitchen appliances including microwave, refrigerator, oven, and chimney to ensure hygiene and peak performance.",
+    img: "https://hellamaid.ca/wp-content/uploads/2023/08/2-1.jpg",
+     route:"/pestcontrol",
+  },
+  {
+    title: "Floor Mopping",
+    description: "Expert mopping services using eco-friendly and non-toxic solutions to clean and shine tiled, wooden, and marble floors without leaving residues or streaks.",
+    img: "https://flooringsolutions.ph/wp-content/uploads/2024/05/Cleaning-Methods-for-Different-Types-of-Floor.jpg",
+     route:"/contract",
+  },
+  {
+    title: "Curtain Cleaning",
+    description: "Steam and dry cleaning of curtains and drapes to remove dust, mold, and allergens while preserving fabric quality and enhancing indoor air quality.",
+    img: "https://selvafacilitymanagement.com/wp-content/uploads/2023/09/Curtain-Cleaning.jpg",
+    route:"/contract",
+  },
+  {
+    title: "Full Home Service",
+    description: "Comprehensive whole-house deep cleaning including bathrooms, kitchens, bedrooms, furniture, and flooring for a fresh, sanitized, and inviting living space.",
+    img: "https://5.imimg.com/data5/SELLER/Default/2023/1/YT/OB/YL/81310128/full-home-cleaning-services.jpg",
+    route:"/contract",
+  },
+];
+
 
   const handleCardClick = (card) => {
     setModalData(card);
   };
 
   const closeModal = () => setModalData(null);
+
+  const cardGroups = [
+    {
+      title: "Soft Service Management",
+      cards: cards.slice(0, 3),
+    },
+    {
+      title: "Pest Control Services",
+      cards: cards.slice(3, 9),
+    },
+    {
+      title: "Contract Staffing Services",
+      cards: cards.slice(9, 12),
+    },
+  ];
 
   return (
     <div>
@@ -189,10 +220,13 @@ function ServicePage() {
         ].map((bubble, i) => (
           <div
             key={i}
-            className={`absolute ${bubble.top || ""} ${bubble.bottom || ""} ${bubble.left || ""
-              } ${bubble.right || ""} ${bubble.size
-              } bg-white opacity-10 rounded-full animate-ping ${bubble.delay || ""
-              }`}
+            className={`absolute ${bubble.top || ""} ${bubble.bottom || ""} ${
+              bubble.left || ""
+            } ${bubble.right || ""} ${
+              bubble.size
+            } bg-white opacity-10 rounded-full animate-ping ${
+              bubble.delay || ""
+            }`}
           />
         ))}
 
@@ -231,55 +265,71 @@ function ServicePage() {
       <div className="min-h-screen bg-gray-100 flex flex-col justify-center items-center p-8">
         {/* Heading */}
         <h2
-          className="text-3xl md:text-4xl font-bold text-gray-800 mb-6 mt-9"
+          className="text-6xl md:text-5xl font-bold text-gray-800 mb-5 mt-9"
           data-aos="fade-up"
         >
           Our Services
         </h2>
+        <p style={{text:"center"}} className="font-semibold">Transform your workplace with our comprehensive facility management and staffing solutions ensuring cleanliness, comfort, efficiency, and seamless daily operations.</p>
 
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-25 gap-y-0">
-          {cards.map((card, i) => (
-            <div
-              key={i}
-              className="container"
+        {/* Cards Grid with Group Headings */}
+        {cardGroups.map((group, index) => (
+          <div key={index} className="group-title w-full ">
+            <h3
+              className="text-2xl font-bold text-gray-800 mt-5"
               data-aos="fade-up"
-              onClick={() => setModalData(card)}
             >
-              <div className="card">
-                {/* Front Side with background image */}
-                <div
-                  className="front relative flex items-center justify-center text-center"
-                  style={{
-                    backgroundImage: `url(${card.img})`,
-                    backgroundSize: "cover",
-                    backgroundPosition: "center",
-                  }}
-                >
-                  {/* Overlay for text visibility */}
-                  <div className="absolute inset-0 bg-opacity-40 rounded-t-2xl"></div>
+              {group.title}
+            </h3>
 
-                  {/* Text centered */}
-                  <div className="relative z-10 px-4">
-                    <p className="front-heading text-white">{card.title}</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3  ">
+              {group.cards.map((card, i) => (
+                <div
+                  key={i}
+                  className="container"
+                  data-aos="fade-up"
+                  onClick={() => setModalData(card)}
+                >
+                  <div className="card">
+                    {/* Front Side with background image */}
+                    <div
+                      className="front relative flex items-center justify-center text-center"
+                      style={{
+                        backgroundImage: `url(${card.img})`,
+                        backgroundSize: "cover",
+                        backgroundPosition: "center",
+                      }}>
+                      {/* Overlay for text visibility */}
+                      <div className="absolute inset-0 bg-opacity-40 "></div>
+                        <div className="relative z-10 px-4">
+                        <p className="front-heading bg-white/80 backdrop-blur-md text-white px-3 py-1 rounded-md text-lg font-semibold">
+                          {card.title}
+                        </p>
+                      </div>
+                    </div>
+
+                    {/* Back Side */}
+                    <div className="back">
+                      <p className="back-heading " style={{color:"blue"}}>{card.title}</p>
+                      <p>{card.description}</p>
+                      <Link
+                        to={card.route}
+                        className="mt-2 px-4 py-2 bg-[blue] rounded-lg hover:bg-blue-700 transition"
+                        style={{color:"white"}}
+                      >
+                        More Info
+                      </Link>
+                    </div>
                   </div>
                 </div>
-
-                {/* Back Side */}
-                <div className="back">
-                  <p className="back-heading">{card.title}</p>
-                  <p>{card.description}</p>
-                </div>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
-
+          </div>
+        ))}
       </div>
 
-
       {/*  VALUE ADDED SERVICES */}
-
 
       <div className="bg-gradient-to-br from-gray-50 to-white py-20 px-6 md:px-20">
         <h2 className="text-3xl md:text-3xl font-bold text-center text-gray-800 mb-16 tracking-tight">
@@ -313,7 +363,8 @@ function ServicePage() {
               title: "Software",
               desc: (
                 <>
-                  Our in-house dashboard enables real-time tracking of MMR, DG sets, and electrical systems for large properties.
+                  Our in-house dashboard enables real-time tracking of MMR, DG
+                  sets, and electrical systems for large properties.
                   <br />
                   <span className="italic text-sm text-gray-500">
                     *Recommended for sites with 100+ manpower*
@@ -336,7 +387,6 @@ function ServicePage() {
       {/* footer */}
 
       <Footer />
-
 
       {/* MODAL */}
       {/* <Modal
