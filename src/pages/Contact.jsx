@@ -104,15 +104,14 @@ const ContactForm = ({ isSidebar }) => {
                                     value={formData.service}
                                     onChange={handleChange}
                                     required
-                                >
-                                    <option value="">-- Select a Service --</option>
-                                    <option value="web">Cleaning Services</option>
-                                    <option value="app">Reception & Front Desk</option>
-                                    <option value="seo">Pantry Services</option>
-                                    <option value="design1">Pest Control</option>
-                                    <option value="design2">Landscaping & Gardening</option>
-                                    <option value="design3">Office Support</option>
-                                    <option value="design4">Multiple Services</option>
+                                ><option value="" disabled>-- Select a Service --</option>
+                                    <option value="cleaning">Cleaning Services</option>
+                                    <option value="reception">Reception & Front Desk</option>
+                                    <option value="pantry">Pantry Services</option>
+                                    <option value="pest">Pest Control</option>
+                                    <option value="landscaping">Landscaping & Gardening</option>
+                                    <option value="support">Office Support</option>
+                                    <option value="multiple">Multiple Services</option>
                                 </select>
                             </div>
 
@@ -173,7 +172,7 @@ const ContactForm = ({ isSidebar }) => {
                         View on Google Maps
                     </a>
                 </div>
-                
+
 
 
 
