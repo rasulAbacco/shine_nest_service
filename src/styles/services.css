@@ -21,17 +21,17 @@ min-height: 100vh;
 
 .flip-card-img 
 {
-    width: 300px;
-height: 230px;
-    border-top-left-radius: 2rem;
+  width: 300px;
+  height: 230px;
+  border-top-left-radius: 2rem;
   border-top-right-radius: 2rem;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
 
 .container {
-    margin-top: 100px;
-  width: 350px;
+  margin-top: 100px;
+  width: 420px;
   height: 314px;
   perspective: 900px;
 }
@@ -43,7 +43,7 @@ height: 230px;
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
-  border-radius: 2rem;
+ 
 }
 
 .container:hover > .card {
@@ -76,4 +76,40 @@ height: 230px;
   font-size: 28px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: bold;
+  color: white;
+}
+
+.group-title
+{
+  text-align: center;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+
+
+/* soft services */
+
+.soft-heading {
+  font-size: 2.25rem; /* text-4xl */
+  font-weight: 700;   /* font-bold */
+  margin-bottom: 1rem; /* mb-4 */
+  color: #2e21df;
+  background: rgba(212, 211, 211, 0.4); /* semi-transparent dark background */
+  backdrop-filter: blur(6px);     /* background blur effect */
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
+}
+
+.soft-subtext {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 400;
+  margin-bottom: 1.5rem; /* mb-6 */
+  color: #2e21df;
+  background: rgba(214, 213, 213, 0.596);
+  backdrop-filter: blur(4px);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  display: inline-block;
 }
