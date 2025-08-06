@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import '../styles/contact.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const ContactForm = ({ isSidebar }) => {
     const [formData, setFormData] = useState({
@@ -31,6 +33,7 @@ const ContactForm = ({ isSidebar }) => {
 
     return (
         <>
+            <Navbar />
             <div className={`contact-container ${isSidebar ? 'sidebar-form' : ''}`}>
                 <div className="contact-wrapper">
                     {/* Left Info Section */}
@@ -150,7 +153,7 @@ const ContactForm = ({ isSidebar }) => {
                     ></iframe>
                 </div>
             </section>
-
+            <Footer />
         </>
     );
 };

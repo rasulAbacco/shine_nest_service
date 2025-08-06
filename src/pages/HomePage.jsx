@@ -1,11 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import HeroCarousel from "../components/HeroCarousel"; // adjust path as needed
-import "../styles/HomePage.css"; // adjust path as needed
+import "../styles/homePage.css"; // adjust path as needed
 import Navbar from '../components/Navbar';
 import WhyChooseUs from '../components/WhyChooseUs'; // adjust path as needed
 import TestimonialsSection from '../components/TestimonialsSection';
 import ClientMarquee from '../components/ClientMarquee';
+import Footer from '../components/Footer';
 const HomePage = () => {
     return (
         <div className="bg-[#030637] text-white">
@@ -54,10 +55,10 @@ const HomePage = () => {
                         <li>Technical Maintenance</li>
                     </ul>
                 </motion.div>
-                <motion.div initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
-                    <div className="home-girl">
+                <motion.div initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }} className='home-girl' >
+                   
                         <img src="/images/img1.png" alt="Commitments" className="rounded-lg shadow-lg" />
-                    </div>
+                  
                 </motion.div>
             </section>
 
@@ -75,6 +76,7 @@ const HomePage = () => {
             <section className="px-8 py-16 bg-white text-[#030637]">
                 <TestimonialsSection />
             </section>
+            <Footer />
         </div>
     );
 };
