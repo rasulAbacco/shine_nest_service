@@ -27,10 +27,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">About</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">Company</a></li>
-            <li><a href="#">FAQs</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Recent Updates</a></li>
+            <li><Link to="#">Company</Link></li>
+            <li><Link to="#">FAQs</Link></li>
+            <li><Link to="#">News</Link></li>
+            <li><Link to="#">Recent Updates</Link></li>
           </ul>
         </div>
 
@@ -38,9 +38,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Resources</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">Development Tutorials</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><Link to="#">Development Tutorials</Link></li>
+            <li><Link to="#">Documentation</Link></li>
+            <li><Link to="#">Blog</Link></li>
           </ul>
         </div>
 
@@ -48,10 +48,10 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Support</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">Customer Support</a></li>
-            <li><a href="#"> Updates</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><Link to="/contact">Customer Support</Link></li>
+            <li><Link to="#"> Updates</Link></li>
+            <li><Link to="#">Terms & Conditions</Link></li>
+            <li><Link to="#">Privacy Policy</Link></li>
           </ul>
         </div>
       </div>
