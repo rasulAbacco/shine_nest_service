@@ -69,7 +69,7 @@ const HeroCarousel = () => {
                     </motion.h1>
                 </AnimatePresence>
 
-                <AnimatePresence mode="wait">
+{/*                 <AnimatePresence mode="wait">
                     <motion.p
                         key={`desc-${slides[currentSlide].id}`}
                         initial={{ opacity: 0, y: 20 }}
@@ -80,7 +80,7 @@ const HeroCarousel = () => {
                     >
                         {slides[currentSlide].description}
                     </motion.p>
-                </AnimatePresence>
+                </AnimatePresence> */}
             </div>
 
         </section>
