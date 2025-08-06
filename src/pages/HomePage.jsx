@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import HeroCarousel from "../components/HeroCarousel"; // adjust path as needed
-import "../styles/HomePage.css"; // adjust path as needed
+import "../styles/homePage.css"; // adjust path as needed
 import Navbar from '../components/Navbar';
 import WhyChooseUs from '../components/WhyChooseUs'; // adjust path as needed
 import TestimonialsSection from '../components/TestimonialsSection';
