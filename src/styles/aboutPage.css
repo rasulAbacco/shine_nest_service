@@ -1,18 +1,18 @@
 :root {
-  --primary: #4300ff;
-
-  --accent: #b13bff;
+  --primary: #4300FF;
+  --dark: #030637;
+  --accent: #B13BFF;
   --text-light: #ccc;
   --dark-blue: #030637; /* Added for journey content color */
   --dot-outer: #030637; /* teal outer dot */
-  --dot-border: #b13bff; /* dark border for contrast */
-  --dot-inner: #f0f0f0; /* light inner dot */
+  --dot-border: #B13BFF; /* dark border for contrast */
+  --dot-inner: #f0f0f0;  /* light inner dot */
 }
 
 /* Top Section */
 .about-top-section {
   text-align: center;
-  padding-bottom: 3rem;
+  padding-bottom: 0.5rem;
   padding-top: 0.5rem;
   background: #fff;
 }
@@ -47,14 +47,15 @@
   text-align: center;
 
   /* Soft glowing effect */
-  box-shadow: 0 0 8px 2px rgba(177, 59, 255, 0.15),
+  box-shadow:
+    0 0 8px 2px rgba(177, 59, 255, 0.15),
     0 4px 15px rgba(179, 59, 255, 0.1);
-  transition: box-shadow 0.3s ease, transform 0.3s ease,
-    background-color 0.3s ease, color 0.3s ease;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 }
 .about-mission-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 0 15px 6px rgba(177, 59, 255, 0.6),
+  box-shadow:
+    0 0 15px 6px rgba(177, 59, 255, 0.6),
     0 8px 40px rgba(179, 59, 255, 0.4);
   background-color: var(--accent);
   color: white;
@@ -100,7 +101,7 @@
   margin: 0 auto;
 }
 .about-timeline::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 4px;
   background: var(--primary);
@@ -140,7 +141,7 @@
   z-index: 2;
 }
 .about-dot::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -189,7 +190,7 @@
   transition: color 0.2s;
 }
 .about-content li::before {
-  content: "✔";
+  content: '✔';
   position: absolute;
   left: 0;
   color: var(--accent);
@@ -205,17 +206,15 @@
   max-width: 1000px;
   margin: 4rem auto;
   padding: 0 1rem;
-  
   text-align: center;
   color: var(--dark-blue);
 }
 .about-journey-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color: white;
+  color: var(--accent);
 }
-
 .journey-subtitle {
   color: #666;
   margin-bottom: 3rem;
@@ -229,7 +228,7 @@
   padding: 0 2rem;
 }
 .journey-timeline::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 5px;
   background: var(--primary);
@@ -271,7 +270,7 @@
   transform: translateY(-50%);
 }
 .journey-dot::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -299,18 +298,19 @@
   display: inline-block;
   max-width: 90%;
   text-align: left;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease,
-    transform 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease, transform 0.3s ease;
   color: #444;
   cursor: pointer;
 
   /* Soft glowing effect */
-  box-shadow: 0 0 8px 2px rgba(177, 59, 255, 0.15),
+  box-shadow:
+    0 0 8px 2px rgba(177, 59, 255, 0.15),
     0 4px 15px rgba(179, 59, 255, 0.1);
 }
 .journey-content:hover {
   background-color: var(--accent);
-  box-shadow: 0 0 15px 6px rgba(177, 59, 255, 0.6),
+  box-shadow:
+    0 0 15px 6px rgba(177, 59, 255, 0.6),
     0 8px 40px rgba(179, 59, 255, 0.4);
   color: white;
   transform: translateY(-6px);
@@ -351,10 +351,10 @@
   padding: 0 1rem;
 }
 .about-certifications-section h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
-  color:white;
+  color: var(--accent);
 }
 .certifications-subtitle {
   color: #666;
@@ -376,12 +376,14 @@
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 
   /* Soft glowing effect */
-  box-shadow: 0 0 8px 2px rgba(177, 59, 255, 0.15),
+  box-shadow:
+    0 0 8px 2px rgba(177, 59, 255, 0.15),
     0 4px 15px rgba(179, 59, 255, 0.1);
   text-align: center; /* Center the icon and text */
 }
 .certification-card:hover {
-  box-shadow: 0 0 15px 6px rgba(177, 59, 255, 0.6),
+  box-shadow:
+    0 0 15px 6px rgba(177, 59, 255, 0.6),
     0 8px 40px rgba(179, 59, 255, 0.4);
   transform: translateY(-6px);
 }
@@ -413,9 +415,9 @@
     width: 100%;
     left: 0 !important;
     text-align: left !important;
-    padding-left: 50px; /* enough space for dot */
+    padding-left: 50px;
     padding-right: 1rem;
-    margin-bottom: 2rem; /* more breathing room */
+    margin-bottom: 2rem;
   }
 
   /* Timeline vertical line */
@@ -423,12 +425,14 @@
     left: 20px;
   }
 
-  /* Timeline dots on the line */
+  /* Fix Dot Alignment */
   .about-dot {
     left: 20px !important;
     right: auto !important;
-    transform: translateY(-50%);
+    top: 0.75rem !important; /* manually position dot vertically */
+    transform: none !important;
   }
+
 
   /* Mission Cards - stack vertically with spacing */
   .about-mission-cards {
@@ -455,18 +459,20 @@
     padding-right: 1rem;
     margin-bottom: 2.5rem; /* consistent spacing */
   }
-
+  
   /* Journey vertical line */
   .journey-timeline::after {
     left: 20px !important;
   }
-
+  
   /* Journey dots on the line */
-  .journey-dot {
-    left: 20px !important;
-    right: auto !important;
-    transform: translateY(-50%);
-  }
+ .journey-dot {
+  left: -10px !important;
+  right: auto !important;
+  top: 12rem !important;
+  transform: none !important;
+}
+
 
   /* Certifications Cards stack */
   .certifications-cards {
