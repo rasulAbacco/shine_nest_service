@@ -6,6 +6,7 @@ import Navbar from '../components/Navbar';
 import WhyChooseUs from '../components/WhyChooseUs'; // adjust path as needed
 import TestimonialsSection from '../components/TestimonialsSection';
 import ClientMarquee from '../components/ClientMarquee';
+import Footer from '../components/Footer';
 const HomePage = () => {
     return (
         <div className="bg-[#030637] text-white">
@@ -75,6 +76,7 @@ const HomePage = () => {
             <section className="px-8 py-16 bg-white text-[#030637]">
                 <TestimonialsSection />
             </section>
+            <Footer />
         </div>
     );
 };

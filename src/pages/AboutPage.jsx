@@ -4,6 +4,8 @@ import '../styles/aboutPage.css';
 
 // Import icons from react-icons
 import { FaBullseye, FaEye, FaHeart, FaCertificate, FaLeaf, FaShieldAlt } from 'react-icons/fa';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 const journey = [
   {
@@ -51,7 +53,8 @@ const certifications = [
 ];
 
 const AboutPage = () => (
-  <HomeLayout>
+  <div>
+    <Navbar />
     <section className="about-top-section">
       <h1>About ShineNest Services</h1>
       <p>
@@ -123,7 +126,8 @@ const AboutPage = () => (
         ))}
       </div>
     </section>
-  </HomeLayout>
+    <Footer />
+  </div>
 );
 
 export default AboutPage;
