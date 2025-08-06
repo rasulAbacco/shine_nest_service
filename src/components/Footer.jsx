@@ -28,12 +28,11 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3 text-white">About</h3>
           <ul className="space-y-2 text-gray-300">
 
-            <li><Link to="#">Company</Link></li>
-            <li><Link to="#">FAQs</Link></li>
-            <li><Link to="#">News</Link></li>
-            <li><Link to="#">Recent Updates</Link></li>
+            <li><a href="#">Company</a></li>
+            <li><Link to="/FAQ">FAQs</Link></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Recent Updates</a></li>
 
-          
           </ul>
         </div>
 
