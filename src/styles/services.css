@@ -1,0 +1,82 @@
+.service-page{
+min-height: 100vh;
+  background: linear-gradient(135deg, #2e21df, #4300FF , #030637);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.service-book
+{
+    background-color: #9400FF; 
+    cursor: pointer;
+}
+.service-book:hover
+{
+    color: #9400FF;
+    background-color: #fff;
+}
+
+
+/* flip cards */
+
+.flip-card-img 
+{
+    width: 300px;
+height: 230px;
+    border-top-left-radius: 2rem;
+  border-top-right-radius: 2rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.container {
+    margin-top: 100px;
+  width: 350px;
+  height: 314px;
+  perspective: 900px;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+  background-color: aliceblue;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+  border-radius: 2rem;
+}
+
+.container:hover > .card {
+  cursor: pointer;
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.front, .back {
+  height: 100%;
+  width: 100%;
+   border-radius: 27px;
+background: #f3f3f3;
+box-shadow:  10px 10px 20px #a1a1a1,
+             -10px -10px 20px #ffffff;
+  
+  position: absolute;
+   
+  backface-visibility: hidden;
+   
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  color: #2e21df;
+}
+
+.back {
+  transform: rotateY(180deg) rotateZ(180deg);
+}
+
+.back-heading, .front-heading {
+  font-size: 28px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bold;
+}
