@@ -406,14 +406,13 @@ form {
 
 /* Map container style */
 .map-container {
-  width: 50%;
-  height: 50%;
+  width: 70%;
+  height: 90%;
   margin-top: 40px;
   align-items: center;
   background-color: #030637;
     display: flex;
     justify-content: center;
-  height: 400px;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -434,7 +433,11 @@ form {
 h2.map-heading {
   font-size: 32px;
   font-weight: 700;
+<<<<<<< HEAD
   color: #000;
+=======
+  color: #030637;
+>>>>>>> a62de27f1eb8acdd0503b4eba032965b03985d36
   text-align: center;
   
   margin-top: 40px;
@@ -454,3 +457,50 @@ h2.map-heading::after {
   border-radius: 2px;
 }
 
+/* Final interactive map section styles */
+.interactive-map-final {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+}
+
+.map-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.map-icon {
+    font-size: 48px;
+    color: #B13BFF;
+}
+
+.map-title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.map-description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.map-cta-button {
+    display: inline-block;
+    background-color: #030637;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 14px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(138, 43, 226, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.map-cta-button:hover {
+    background-color: #6c1bb2;
+}
