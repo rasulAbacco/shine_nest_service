@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 import {
   Facebook,
   Twitter,
@@ -15,13 +17,12 @@ const Footer = () => {
         <div>
           <h1 className="text-2xl font-bold text-white mb-3">Shine Nest Services</h1>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/testimonials">Testimonials</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><Link to="/about">About</Link></li>
+            <li><Link to="/services">Services</Link></li>
+            <li><Link to="/testimonials">Testimonials</Link></li>
+            <li><Link to="/contact">Contact</Link></li>
           </ul>
         </div>
-
         {/* About */}
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">About</h3>

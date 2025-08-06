@@ -55,13 +55,13 @@ const HeroCarousel = () => {
     }, []);
 
     const highlightWords = [
-        "Elite",
-        "Cleaning",
-        "Solutions",
-        "Affordable",
-        "Satisfaction",
-        "Trained",
-        "Committed",
+        // "Elite",
+        // "Cleaning",
+        // "Solutions",
+        // "Affordable",
+        // "Satisfaction",
+        // "Trained",
+        // "Committed",
     ];
 
     return (
@@ -127,7 +127,7 @@ const HeroCarousel = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -40 }}
                         transition={{ duration: 0.5 }}
-                        className="text-3xl md:text-5xl font-bold text-center px-6 py-4 bg-white/10 backdrop-blur-md rounded-xl text-white shadow-md"
+                        className="text-3xl md:text-5xl font-bold text-center px-6 py-4 bg-white/10 backdrop-blur-md rounded-xl text-black shadow-md"
                     >
                         {slides[currentSlide].text.split(" ").map((word, index) => {
                             const cleanWord = word.replace(/[^a-zA-Z]/g, "");
@@ -154,7 +154,7 @@ const HeroCarousel = () => {
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, delay: 0.1 }}
-                        className="mt-4 text-center text-base md:text-lg font-medium text-white bg-black/30 backdrop-blur-md px-4 py-2 rounded-md"
+                        className="mt-4 text-center text-base md:text-lg font-medium text-black bg-white/30 backdrop-blur-md px-4 py-2 rounded-md"
                     >
                         {slides[currentSlide].description}
                     </motion.p>
