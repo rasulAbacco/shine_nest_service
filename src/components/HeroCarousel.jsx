@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "../styles/HomePage.css"; // adjust path as needed
+import "../styles/homePage.css"; // adjust path as needed
 
 const slides = [
     {
