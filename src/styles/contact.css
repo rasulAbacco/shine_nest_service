@@ -433,7 +433,11 @@ form {
 h2.map-heading {
   font-size: 32px;
   font-weight: 700;
+<<<<<<< HEAD
+  color: #000;
+=======
   color: #030637;
+>>>>>>> a62de27f1eb8acdd0503b4eba032965b03985d36
   text-align: center;
   
   margin-top: 40px;
