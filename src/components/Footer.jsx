@@ -50,8 +50,8 @@ const Footer = () => {
           <ul className="space-y-2 text-gray-300">
             <li><a href="#">Customer Support</a></li>
             <li><a href="#"> Updates</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><Link to="/terms-and-privacy">Privacy Policy</Link></li>
+            <li><Link to="/terms-and-privacy">Terms & Conditions</Link></li>
           </ul>
         </div>
       </div>
@@ -68,8 +68,8 @@ const Footer = () => {
 
         {/* Links */}
         <div className="flex space-x-4 mb-4 md:mb-0">
-          <a href="#" className="hover:text-white">Privacy Policy</a>
-          <a href="#" className="hover:text-white">Terms & Conditions</a>
+          <li><Link to="/terms-and-privacy">Privacy Policy</Link></li>
+          <li><Link to="/terms-and-privacy">Terms & Conditions</Link></li>
           <a href="#" className="hover:text-white">Support</a>
         </div>
 
