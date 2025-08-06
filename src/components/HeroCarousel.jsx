@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "../styles/homePage.css"; // Adjust path if needed
+import "../styles/homePage.css";
 
 const slides = [
     {
@@ -35,12 +35,23 @@ const slides = [
 
 const HeroCarousel = () => {
     const [currentSlide, setCurrentSlide] = useState(0);
+    const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
+
+    const sparkleRef = useRef(null);
 
     useEffect(() => {
         const timer = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);
         }, 4000);
         return () => clearInterval(timer);
+    }, []);
+
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setCursorPos({ x: e.clientX, y: e.clientY });
+        };
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => window.removeEventListener("mousemove", handleMouseMove);
     }, []);
 
     const highlightWords = [
@@ -60,10 +71,55 @@ const HeroCarousel = () => {
                 className="absolute inset-0 w-full h-full bg-cover bg-center scale-105 transition-all duration-1000"
                 style={{ backgroundImage: `url(${slides[currentSlide].image})` }}
             />
-            {/* Overlay */}
+
+            {/* Sparkle effect layer */}
+            <div
+                ref={sparkleRef}
+                className="absolute inset-0 pointer-events-none z-10"
+            >
+                {[...Array(40)].map((_, i) => {
+                    const size = Math.random() * 4 + 1;
+                    const left = Math.random() * 100;
+                    const top = Math.random() * 100;
+                    const delay = Math.random() * 5;
+                    const duration = Math.random() * 3 + 2;
+
+                    return (
+                        <motion.div
+                            key={i}
+                            className="absolute rounded-full bg-white opacity-80 blur-sm"
+                            style={{
+                                width: size,
+                                height: size,
+                                left: `${left}%`,
+                                top: `${top}%`,
+                            }}
+                            animate={{
+                                opacity: [0, 1, 0],
+                                scale: [1, 1.5, 1],
+                            }}
+                            transition={{
+                                duration: duration,
+                                repeat: Infinity,
+                                delay,
+                            }}
+                        />
+                    );
+                })}
+            </div>
+
+            {/* Shine on cursor */}
+            <motion.div
+                className="absolute w-24 h-24 bg-white/20 rounded-full blur-2xl pointer-events-none z-20"
+                animate={{
+                    x: cursorPos.x - 48,
+                    y: cursorPos.y - 48,
+                }}
+                transition={{ type: "spring", stiffness: 100, damping: 20 }}
+            />
 
             {/* Text Content */}
-            <div className="relative z-10 max-w-4xl w-full">
+            <div className="relative z-30 max-w-4xl w-full">
                 <AnimatePresence mode="wait">
                     <motion.h1
                         key={`title-${slides[currentSlide].id}`}

@@ -19,7 +19,7 @@
   min-height: 70vh;
 }
 
-.services-box{
+.services-box {
   margin-left: 2rem;
 }
 .services-box h4 {
@@ -83,3 +83,9 @@
 .animate-marquee-reverse {
   animation: marquee-reverse 25s linear infinite;
 }
+
+.blur-sm {
+  filter: blur(3px);
+}
+
+
