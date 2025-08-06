@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import "../styles/HomePage.css"; // adjust path as needed
+import "../styles/homePage.css"; // adjust path as needed
 
 const slides = [
     {
@@ -69,18 +69,22 @@ const HeroCarousel = () => {
                     </motion.h1>
                 </AnimatePresence>
 
-                <AnimatePresence mode="wait">
+
+                {/* <AnimatePresence mode="wait" className="blur-[5px]">
+
+{/*                 <AnimatePresence mode="wait">
+
                     <motion.p
                         key={`desc-${slides[currentSlide].id}`}
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
                         transition={{ duration: 0.4, delay: 0.1 }}
-                        className="mt-4 text-center text-base md:text-lg hero-description"
+                        className="mt-4 text-center text-base  md:text-lg hero-description"
                     >
                         {slides[currentSlide].description}
                     </motion.p>
-                </AnimatePresence>
+                </AnimatePresence> */}
             </div>
 
         </section>
