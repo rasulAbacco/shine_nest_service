@@ -31,7 +31,7 @@ const ContractStaffingServices = () => {
       <Navbar />
 
       {/* Hero Section */}
-            <div
+      <div
             className="relative from-blue-900 via-blue-700 to-blue-600 text-white min-h-[60vh] flex items-center justify-center px-6 md:px-24 overflow-hidden bg-cover bg-center"
             style={{
                 backgroundImage: `url('https://indiaemployerforum.org/wp-content/uploads/2023/01/Contract-Staffing-India-Employer-Forum.png')`,
@@ -42,13 +42,17 @@ const ContractStaffingServices = () => {
 
         {/* Heading Content */}
         <div className="relative z-10 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            Contract Staffing Services
-          </h1>
-          <p className="text-lg md:text-xl text-white/80">
-            Professional support staff tailored to your business needs — reliable and efficient.
-          </p>
+          <div className="inline-block px-6 py-4 bg-blue-800/20 backdrop-blur-md rounded-lg shadow-md">
+            <h1 className="text-4xl md:text-5xl font-bold mb-4 ">
+              Contract Staffing Services
+            </h1>
+            <p className="text-lg md:text-xl text-white/80">
+              Professional support staff tailored to your business needs reliable and efficient.
+            </p>
+          </div>
         </div>
+
+
       </div>
 
       {/* Service Details */}

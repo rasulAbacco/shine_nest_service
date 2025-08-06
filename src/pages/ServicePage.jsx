@@ -90,21 +90,21 @@ function ServicePage() {
      route:"/pestcontrol",
   },
   {
-    title: "Floor Mopping",
-    description: "Expert mopping services using eco-friendly and non-toxic solutions to clean and shine tiled, wooden, and marble floors without leaving residues or streaks.",
-    img: "https://flooringsolutions.ph/wp-content/uploads/2024/05/Cleaning-Methods-for-Different-Types-of-Floor.jpg",
+    title: "Stationery management",
+    description: "Our team ensures timely procurement, distribution, and tracking of all office stationery supplies. This helps maintain inventory control and avoids disruptions in office productivity.",
+    img: "https://t3.ftcdn.net/jpg/02/68/41/46/360_F_268414618_zpZvftaDcCLJj6tgGMhNNSh9gRUf6IOv.jpg",
      route:"/contract",
   },
   {
-    title: "Curtain Cleaning",
-    description: "Steam and dry cleaning of curtains and drapes to remove dust, mold, and allergens while preserving fabric quality and enhancing indoor air quality.",
-    img: "https://selvafacilitymanagement.com/wp-content/uploads/2023/09/Curtain-Cleaning.jpg",
+    title: "Office Boy/peon services",
+    description: "We provide trained office boys and peons to handle errands, document delivery, serving refreshments, and general office assistance. Their support ensures smooth day-to-day operations and internal communication.",
+    img: "https://media.istockphoto.com/id/1222545476/photo/handsome-smiling-cleaner-looking-at-camera-while-standing-near-computer-monitors.jpg?s=612x612&w=0&k=20&c=qBZsQ5wdd8s9IUGV9D8ARTGzOWvv0c05cMyCcwk4RxY=",
     route:"/contract",
   },
   {
-    title: "Full Home Service",
-    description: "Comprehensive whole-house deep cleaning including bathrooms, kitchens, bedrooms, furniture, and flooring for a fresh, sanitized, and inviting living space.",
-    img: "https://5.imimg.com/data5/SELLER/Default/2023/1/YT/OB/YL/81310128/full-home-cleaning-services.jpg",
+    title: "Filing/document support",
+    description: "We offer skilled staff for filing, organizing, and managing physical and digital documents. This ensures quick access, compliance, and secure handling of important records.",
+    img: "https://media.istockphoto.com/id/1394199344/photo/document-management-system-or-dms-automation-software-to-archiving-and-efficiently-manage-and.jpg?s=612x612&w=0&k=20&c=YaQU7BoPNvaxANtTdRMGhpaePXt7q5UlOYRjKiGqR8I=",
     route:"/contract",
   },
 ];
@@ -224,7 +224,7 @@ function ServicePage() {
               bubble.left || ""
             } ${bubble.right || ""} ${
               bubble.size
-            } bg-white opacity-10 rounded-full animate-ping ${
+            } bg-white opacity-30 rounded-full animate-ping ${
               bubble.delay || ""
             }`}
           />
@@ -245,9 +245,9 @@ function ServicePage() {
             We help you live in a space that feels clean, healthy, and cared
             for.
           </p>
-          <button className="service-book text-white font-semibold py-2 px-5 rounded-full transition bg-blue-600 hover:bg-blue-700">
+          {/* <button className="service-book text-white font-semibold py-2 px-5 rounded-full transition bg-blue-600 hover:bg-blue-700">
             Book Now →
-          </button>
+          </button> */}
         </div>
 
         {/* IMAGE */}
