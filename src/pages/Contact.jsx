@@ -3,6 +3,7 @@ import '../styles/contact.css';
 import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import { FaMapMarkedAlt } from "react-icons/fa";
 
 const ContactForm = ({ isSidebar }) => {
     const [formData, setFormData] = useState({
@@ -152,6 +153,32 @@ const ContactForm = ({ isSidebar }) => {
                         referrerPolicy="no-referrer-when-downgrade"
                     ></iframe>
                 </div>
+
+                {/* Interactive Map Section (final design with centered icon) */}
+                <div className="interactive-map-final">
+                    <div className="map-icon-wrapper">
+                        <FaMapMarkedAlt className="map-icon" />
+                    </div>
+
+                    <h3 className="map-title">Interactive Map</h3>
+                    <p className="map-description">
+                        Explore our location and get directions easily through Google Maps.
+                    </p>
+                    <a
+                        href="https://www.google.com/maps"
+                        className="map-cta-button"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        View on Google Maps
+                    </a>
+                </div>
+                
+
+
+
+
+
             </section>
             <Footer />
         </>
