@@ -55,10 +55,10 @@ const HomePage = () => {
                         <li>Technical Maintenance</li>
                     </ul>
                 </motion.div>
-                <motion.div initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }}>
-                    <div className="home-girl">
+                <motion.div initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} transition={{ duration: 1 }} className='home-girl' >
+                   
                         <img src="/images/img1.png" alt="Commitments" className="rounded-lg shadow-lg" />
-                    </div>
+                  
                 </motion.div>
             </section>
 
