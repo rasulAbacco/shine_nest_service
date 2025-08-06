@@ -8,17 +8,17 @@ import {
 
 const Footer = () => {
   return (
-    <footer className="bg-[#3f00fc] text-white py-12 px-6 md:px-16">
+    <footer className="bg-[#030637] text-white py-12 px-6 md:px-16">
       <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-10">
 
         {/* Logo + Menu */}
         <div>
           <h1 className="text-2xl font-bold text-white mb-3">Shine Nest Services</h1>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">About</a></li>
-            <li><a href="#">Features</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services">Services</a></li>
+            <li><a href="/testimonials">Testimonials</a></li>
+            <li><a href="/contact">Contact</a></li>
           </ul>
         </div>
 
@@ -37,7 +37,6 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Resources</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">Courses</a></li>
             <li><a href="#">Development Tutorials</a></li>
             <li><a href="#">Documentation</a></li>
             <li><a href="#">Blog</a></li>
@@ -49,7 +48,7 @@ const Footer = () => {
           <h3 className="text-lg font-semibold mb-3 text-white">Support</h3>
           <ul className="space-y-2 text-gray-300">
             <li><a href="#">Customer Support</a></li>
-            <li><a href="#">Project Updates</a></li>
+            <li><a href="#"> Updates</a></li>
             <li><a href="#">Terms & Conditions</a></li>
             <li><a href="#">Privacy Policy</a></li>
           </ul>

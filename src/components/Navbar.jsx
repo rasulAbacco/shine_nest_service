@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import logo from '../assets/image.png'; // Adjust the path based on your file structure
+
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -7,21 +9,62 @@ const Navbar = () => {
     const toggleMenu = () => setIsOpen(!isOpen);
 
     return (
-        <nav className="bg-[#4300FF] text-white shadow-md">
-            <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-                {/* Logo */}
-                <Link to="/" className="text-2xl font-bold">
-                    Shine Nest Service
+        <nav className="bg-[white] text-[#4300FF] shadow-md">
+            <div className="max-w-7xl mx-auto  px-4 py-3 flex items-center justify-between">
+                {/* Left aligned icons here */}
+
+                <Link to="/" className="logo-link">
+                    <img src={logo} alt="Logo" className="h-16 w-auto object-contain" />
+
                 </Link>
+                {/* You can add your navigation menu or other components here */}
+
+
 
                 {/* Desktop Nav Links */}
-                <ul className="hidden md:flex space-x-6">
-                    <li><Link to="/" className="hover:text-[#B13BFF]">Home</Link></li>
-                    <li><Link to="/about" className="hover:text-[#B13BFF]">About</Link></li>
-                    <li><Link to="/services" className="hover:text-[#B13BFF]">Services</Link></li>
-                    <li><Link to="/contact" className="hover:text-[#B13BFF]">Contact</Link></li>
-                    <li><Link to="/testimonials" className="hover:text-[#B13BFF]">Testimonials</Link></li>
+                <ul className="flex space-x-6 text-blue-900 font-medium text-sm md:text-base">
+                    <li>
+                        <Link
+                            to="/"
+                            className="relative hover:text-[#B13BFF] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#B13BFF] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            Home
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/about"
+                            className="relative hover:text-[#B13BFF] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#B13BFF] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            About
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/services"
+                            className="relative hover:text-[#B13BFF] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#B13BFF] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            Services
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/contact"
+                            className="relative hover:text-[#B13BFF] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#B13BFF] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            Contact
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            to="/testimonials"
+                            className="relative hover:text-[#B13BFF] after:content-[''] after:absolute after:left-0 after:-bottom-1 after:w-0 after:h-[2px] after:bg-[#B13BFF] after:transition-all after:duration-300 hover:after:w-full"
+                        >
+                            Testimonials
+                        </Link>
+                    </li>
                 </ul>
+
 
                 {/* Mobile Menu Button */}
                 <button
@@ -44,16 +87,18 @@ const Navbar = () => {
             </div>
 
             {/* Mobile Nav Menu */}
-            {isOpen && (
-                <ul className="md:hidden px-4 pb-4 space-y-2 bg-[#4300FF]">
-                    <li><Link to="/" className="block hover:text-[#B13BFF]">Home</Link></li>
-                    <li><Link to="/about" className="block hover:text-[#B13BFF]">About</Link></li>
-                    <li><Link to="/services" className="block hover:text-[#B13BFF]">Services</Link></li>
-                    <li><Link to="/contact" className="block hover:text-[#B13BFF]">Contact</Link></li>
-                    <li><Link to="/testimonials" className="block hover:text-[#B13BFF]">Testimonials</Link></li>
-                </ul>
-            )}
-        </nav>
+            {
+                isOpen && (
+                    <ul className="md:hidden px-4 pb-4 space-y-2 bg-[#4300FF]">
+                        <li><Link to="/" className="block hover:text-[#B13BFF]">Home</Link></li>
+                        <li><Link to="/about" className="block hover:text-[#B13BFF]">About</Link></li>
+                        <li><Link to="/services" className="block hover:text-[#B13BFF]">Services</Link></li>
+                        <li><Link to="/contact" className="block hover:text-[#B13BFF]">Contact</Link></li>
+                        <li><Link to="/testimonials" className="block hover:text-[#B13BFF]">Testimonials</Link></li>
+                    </ul>
+                )
+            }
+        </nav >
     );
 };
 
