@@ -28,12 +28,14 @@ min-height: 100vh;
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
 }
-
 .container {
   margin-top: 100px;
-  width: 420px;
+  width: 100%;                /* full width of the grid column */
+  max-width: 420px;           /* don't stretch too far on larger screens */
   height: 314px;
   perspective: 900px;
+  margin-left: auto;
+  margin-right: auto;         /* center card on mobile */
 }
 
 .card {
@@ -43,8 +45,8 @@ min-height: 100vh;
   position: relative;
   transition: transform 1500ms;
   transform-style: preserve-3d;
- 
 }
+
 
 .container:hover > .card {
   cursor: pointer;
