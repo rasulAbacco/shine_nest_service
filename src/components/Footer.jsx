@@ -27,10 +27,12 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">About</h3>
           <ul className="space-y-2 text-gray-300">
+
             <li><a href="#">Company</a></li>
             <li><Link to="/FAQ">FAQs</Link></li>
             <li><a href="#">News</a></li>
             <li><a href="#">Recent Updates</a></li>
+
           </ul>
         </div>
 
@@ -38,9 +40,9 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Resources</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">Development Tutorials</a></li>
-            <li><a href="#">Documentation</a></li>
-            <li><a href="#">Blog</a></li>
+            <li><Link to="#">Development Tutorials</Link></li>
+            <li><Link to="#">Documentation</Link></li>
+            <li><Link to="#">Blog</Link></li>
           </ul>
         </div>
 
@@ -48,10 +50,11 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-3 text-white">Support</h3>
           <ul className="space-y-2 text-gray-300">
-            <li><a href="#">Customer Support</a></li>
+            <li><Link to="/contact">Customer Support</Link></li>
             <li><a href="#"> Updates</a></li>
             <li><Link to="/terms-and-privacy">Privacy Policy</Link></li>
             <li><Link to="/terms-and-privacy">Terms & Conditions</Link></li>
+
           </ul>
         </div>
       </div>
@@ -68,9 +71,9 @@ const Footer = () => {
 
         {/* Links */}
         <div className="flex space-x-4 mb-4 md:mb-0">
-          <li><Link to="/terms-and-privacy">Privacy Policy</Link></li>
-          <li><Link to="/terms-and-privacy">Terms & Conditions</Link></li>
-          <a href="#" className="hover:text-white">Support</a>
+          <Link to="/terms-and-privacy">Privacy Policy</Link>
+          <Link to="/terms-and-privacy">Terms & Conditions</Link>
+          <Link to="/contact">Support</Link>
         </div>
 
         {/* Copyright */}

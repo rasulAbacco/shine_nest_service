@@ -81,7 +81,7 @@ const ServicesSection = () => {
                 transition={{ duration: 1 }}
                 className="text-4xl md:text-5xl font-bold text-center mb-8 text-purple-700"
             >
-                <span className="text-black">Our</span> Services
+                <span className="text-black">Our Services</span>
             </motion.h2>
             <p className="text-center max-w-7xl mx-auto mb-10 text-gray-900 text-2xl md:text-2xl font-semibold">
                 Elevating your workspaces with reliable, end-to-end soft service solutions — from daily cleaning and pest control to front desk and facility support, all under one expert team.
